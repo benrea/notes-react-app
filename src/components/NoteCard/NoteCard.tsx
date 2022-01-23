@@ -10,6 +10,13 @@ interface NoteCardProps {
     deleteNote?: () => void;
 }
 
+const NOTE_COLOURS = [
+    NoteColour.black,
+    NoteColour.red,
+    NoteColour.green,
+    NoteColour.blue
+];
+
 const NoteCard: React.FC<NoteCardProps> = (props) => {
     const {note} = props;
 
@@ -21,9 +28,12 @@ const NoteCard: React.FC<NoteCardProps> = (props) => {
     }
 
     const onColour = () => {
+        let newColour = note.colour ?? 0;
+        newColour++;
+
         props.updateNote?.({
             ...note,
-            colour: NoteColour.blue // TODO
+            colour: newColour % NOTE_COLOURS.length
         });
     }
 
@@ -32,7 +42,7 @@ const NoteCard: React.FC<NoteCardProps> = (props) => {
     }
 
     return (
-        <div className={`card-container card-colour--${note.colour}`}>
+        <div className={`card-container card-colour--${NoteColour[note.colour ?? 0]}`}>
             <button onClick={onColour}>Colour</button>
             <button onClick={onDelete}>Delete</button>
             <textarea onChange={onChangeContent}>{note.content}</textarea>

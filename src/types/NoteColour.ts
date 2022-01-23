@@ -1,7 +1,8 @@
 enum NoteColour {
-    red = "red",
-    green = "green",
-    blue = "blue",
+    black,
+    red,
+    green,
+    blue,
 }
 
 export default NoteColour;
