@@ -1,10 +1,10 @@
-import NoteColour from './NoteColour'
+import NoteColour from "./NoteColour";
 
 type Note = {
-    id: number;
-    title?: string;
-    content?: string;
-    colour?: NoteColour;
-}
+  id: number;
+  title?: string;
+  content?: string;
+  colour?: NoteColour;
+};
 
 export default Note;

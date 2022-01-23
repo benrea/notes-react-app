@@ -1,20 +1,18 @@
 .card-container {
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    /* width: 100px; */
-    /* height: 100px; */
-    padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  padding: 1rem;
 }
 
 .card-colour--red {
-    background-color: red;
+  background-color: red;
 }
 
 .card-colour--green {
-    background-color: green;
+  background-color: green;
 }
 
 .card-colour--blue {
-    background-color: blue;
+  background-color: blue;
 }
